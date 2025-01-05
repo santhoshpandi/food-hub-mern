@@ -1,0 +1,31 @@
+.foodItems>option{
+  @apply duration-150
+}
+
+.focuss{
+  @apply 
+  caret-orange-700
+  px-2 focus:outline-none focus:border-none
+}
+
+.quantity{
+  @apply w-[100px] flex justify-center
+  items-center
+}
+
+.overlay{
+  @apply fixed top-0 bottom-0 left-0 right-0 z-[9]
+}
+
+
+/* Authentication */
+.ctr{
+  @apply shadow-lg  p-10 rounded-lg bg-white gap-20
+}
+
+.signupform{
+  @apply flex flex-col gap-5 justify-center items-center
+}
+.signupform>input{
+  @apply border-none bg-orange-100 px-2 focus:outline-none focus:border-none
+}
