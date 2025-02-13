@@ -8,16 +8,19 @@ import Loading from './components/Loading'
 const Authentication = lazy(() => import('./components/Authentication'))
 import { BillProvider } from './contexts/BillContext'
 import { UserProvider, useUser } from './contexts/UserContext'
+import { SnackbarProvider } from 'notistack'
 
 //Context Management
 function AppProvider({ children }) {
 
   return (
-    <UserProvider>
-      <BillProvider>
-        {children}
-      </BillProvider>
-    </UserProvider>
+    <SnackbarProvider>
+      <UserProvider>
+        <BillProvider>
+          {children}
+        </BillProvider>
+      </UserProvider>
+    </SnackbarProvider>
   )
 }
 

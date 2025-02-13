@@ -1,17 +1,18 @@
 import { createContext, useContext, useState, useEffect } from "react";
 import axios from 'axios'
 import {  useNavigate } from 'react-router-dom'
-
+import { useSnackbar } from "notistack";
 
 export const UserContext = createContext()
 
 export function UserProvider({ children }) {
+  
   const [userData, setUserData] = useState({})
   const navigate = useNavigate()
+  const { enqueueSnackbar } = useSnackbar(); 
 
   useEffect(() => {
-    showUser()
-    
+    showUser()    
   },[])
 
    // ------------- Refreshing Access Token -------------
@@ -37,16 +38,17 @@ export function UserProvider({ children }) {
       })
 
       if (response.data.success) {
-        alert('Successfully Registered☺')
+        enqueueSnackbar('Successfully Registered',{variant:'success'})
         return response.data.userData
       }
       else {
-        alert(response.data.message)
+        enqueueSnackbar(response.data.message,{variant:'error'})
       }
 
     }
     catch (err) {
       console.log("Error in Registering " + err)
+      enqueueSnackbar(err.message,{variant:'error'})
     }
 
   }
@@ -63,17 +65,17 @@ export function UserProvider({ children }) {
           ...userData,
           _id: response.data.userData._id
         })
-        console.log("🗝" + response.data.accessToken)       
-        
-        navigate(response.data.redirectUrl)
+        console.log("🗝" + response.data.accessToken) 
+        navigate(response.data.redirectUrl)        
+        enqueueSnackbar('Logined Successfully!',{variant:'success'})       
       }
       else {
-        alert(response.data.message)
+        enqueueSnackbar(response.data.message,{variant:'error'})
       }
 
     }
     catch (err) {
-      alert('Error in Login ' + err)
+      enqueueSnackbar(err.message,{variant:'error'})
     }
   }
 
@@ -91,16 +93,19 @@ export function UserProvider({ children }) {
     }
   }
 
-  async function updateUser(userData) {
+  async function updateUser(userData,event) {
 
+    event.preventDefault()
     const response = await axios.put('http://localhost:3000/api/user/register', userData, {
       withCredentials: true
     })
     if (response.data.success) {
-      alert('Succesfully updated')
+      console.log('updated')
+      enqueueSnackbar('Successfully Updated!',{variant:'success'})
+
     }
     else {
-      alert(response.data.message)
+      enqueueSnackbar(response.data.message,{variant:'error'})
     }
 
   }
@@ -114,11 +119,11 @@ export function UserProvider({ children }) {
     
     if (response.data.success) {
       setUserData({})
-      alert('Succesfully Account Deleted')
       navigate('/')
+      enqueueSnackbar('Successfully Account Deleted',{variant:'success'})
     }
     else {
-      alert(response.data.message)
+      enqueueSnackbar(response.data.message,{variant:'error'})
     }
   }
 
@@ -127,10 +132,11 @@ export function UserProvider({ children }) {
       withCredentials:true
     })
     if(response.data.success){
-      window.location.href = response.data.redirectUrl
+      enqueueSnackbar('Logged Out Successfully!',{variant:'success'}) 
+      window.location.href = response.data.redirectUrl         
     }
     else{
-      alert('from logout '+response.data.message)
+      enqueueSnackbar(response.data.message,{variant:'error'})
     }
   }
 

@@ -4,7 +4,6 @@ import { useBill } from '../contexts/BillContext'
 export default function Bill() {
 
   const {billData,setBillData,submitData} = useBill()
-
   function handleChange(event){
 
     setBillData((prev)=>(
@@ -25,6 +24,7 @@ export default function Bill() {
   }
 
   return (
+    <>
     <div className='bills   flex flex-wrap items-center justify-center gap-5  mb-20'>
       <div className='md:w-[40%] w-[80%]'>
         <img src={imgUrl} alt="Loading" className='w-full h-full mix-blend-multiply' />
@@ -76,5 +76,6 @@ export default function Bill() {
         <button className="col-span-2 bg-blue-500 text-white py-2 rounded-sm duration-150 hover:bg-slate-900">Proceed to Payment</button>
       </form>
     </div>
+    </>
   )
 }

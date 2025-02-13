@@ -2,12 +2,15 @@ import { useState, useEffect, createContext, useContext } from "react";
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useUser } from './UserContext'
+import { useSnackbar } from "notistack";
 
 export const BillContext = createContext()
 
 export function BillProvider({ children }) {
 
   const { userData,showUser,refreshAccessToken } = useUser()
+    const { enqueueSnackbar } = useSnackbar()
+  
   //From the Form
   const [billData, setBillData] = useState({
     userId:'', date: '', name: '', mobile: '', foodItems: '', quantity: ''
@@ -68,7 +71,7 @@ export function BillProvider({ children }) {
         withCredentials:true
       })
       if(response.data.success){        
-        alert(response.data.message) 
+        enqueueSnackbar(response.data.message,{variant:'success'})
         await showBillData()
       }
       else if (response.data === 'Invalid Token') {
@@ -91,7 +94,7 @@ export function BillProvider({ children }) {
     
     const regex = /^[1-9]\d{9}$/
     let match = regex.test(billData.mobile)
-    if (!match) return (alert('Enter valid Phone Number📞'))
+    if (!match) return (      enqueueSnackbar('Enter valid Phone Number📞',{variant:'warning'}))
     try {
       console.log("submitting....")
     
@@ -112,7 +115,7 @@ export function BillProvider({ children }) {
           quantity: ''
         });
         await showBillData()
-        console.log('Order Booked')
+        enqueueSnackbar('Order Booked Successfully',{variant:'success'})
       }
       else if (response.data === 'Invalid Token') {
         console.log('Attempting Refresh token');
@@ -120,11 +123,11 @@ export function BillProvider({ children }) {
         await submitData(billData)          
       }
       else {
-        console.log('Order Booking Failed😞')             
+        enqueueSnackbar('Order Booking Failed!',{variant:'error'})           
       }
     }
     catch (err) {
-      console.log('Error Occured' + err)
+      enqueueSnackbar(err.message,{variant:'error'})
     }
   }
 

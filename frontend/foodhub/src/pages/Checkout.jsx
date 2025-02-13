@@ -1,10 +1,10 @@
 import { useEffect } from "react"
 import { useBill } from "../contexts/BillContext"
-
 export default function Checkout() {
   const { bills,deleteBillData } = useBill()
-
   return (
+    <>
+        
     <div className="grid  lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-4 p-4">
     {
       bills.length!==0 ?
@@ -32,5 +32,6 @@ export default function Checkout() {
       </div>
     }
     </div>
+    </>
   )
 }
