@@ -42,6 +42,15 @@ export default function Home() {
         }
       },
       {
+        breakpoint: 866,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: false
+        }
+      },
+      {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
@@ -78,7 +87,7 @@ export default function Home() {
       {/* ---------------- Reviews Section ---------------- */}
       <div className="p-5">
         <h2 className='text-center text-[35px] text-orange-800 font-semibold mb-8'>Reviews</h2>
-        <div className='m-auto w-[95%] p-4 px-5 bg-zinc-900 rounded-lg shadow-2xl'>
+        <div className='m-auto w-[95%] p-4 px-5 bg-zinc-900 rounded-lg shadow-2xl items-center'>
           <Slider {...settings} >
             {
               reviews.map((review, index) => (
