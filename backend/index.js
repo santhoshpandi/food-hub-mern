@@ -24,7 +24,6 @@ app.use(cors({
   credentials: true,
 }))
 
-
 foodDB()
 app.use((req,res,next)=>{
   console.log(req.method+" "+req.url)
@@ -42,5 +41,5 @@ app.use('/api',billRouter)
 
 
 app.listen(port ,()=>{
-  console.log('Server listening to port: '+process.env.PORT+"💖")
+  console.log('Server listening to port: '+port+"💖")
 })

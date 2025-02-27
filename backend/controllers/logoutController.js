@@ -20,13 +20,13 @@ const logoutUser = async (req, res) => {
     res.clearCookie('jwt', {
       httpOnly: true,
       sameSite: 'None',
-      secure: false
+      secure: isProduction
     })
     //Deleting Accesstoken
     res.clearCookie('accessToken', {
       httpOnly: true,
       sameSite: 'None',
-      secure: false
+      secure: isProduction
     })
     return res.json({
       message:'Cookies Cleared..  User not found..'
@@ -41,14 +41,14 @@ const logoutUser = async (req, res) => {
   res.clearCookie('jwt', {
     httpOnly: true,
     sameSite: 'None',
-    secure: false
+    secure: isProduction
   })
 
   //Deleting Accesstoken
   res.clearCookie('accessToken', {
     httpOnly: true,
     sameSite: 'None',
-    secure: false
+    secure: isProduction
   })
 
 

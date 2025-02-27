@@ -1,6 +1,7 @@
 const User = require('../models/User')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
+const isProduction = process.env.NODE_ENV === 'production';
 
 const loginUser = async (req, res) => {
   const { username, password } = req.body
@@ -43,13 +44,13 @@ const loginUser = async (req, res) => {
     httpOnly: true,
     maxAge: 24 * 60 * 60 * 1000,
     sameSite: 'Lax',
-    secure: false
+    secure: isProduction
   })
   res.cookie('accessToken', accessToken, {
     httpOnly: true,
     maxAge: 60 * 60 * 1000,
     sameSite: 'Lax',
-    secure: false
+    secure: isProduction
   })
 
   // console.log('from logincontroller ' + refreshToken)
