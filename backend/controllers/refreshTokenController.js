@@ -4,18 +4,18 @@ const jwt = require('jsonwebtoken')
 
 // Handles the Refresh Token  'api/refresh/'
 const handleRefreshToken = async (req, res) => {
-  console.log('re wokring')
+  // console.log('re wokring')
   const cookies = req.cookies
   if (!cookies?.jwt) return res.json({
     "message": "No Cookies found"
   })
   
-  console.log(cookies.jwt)
+  // console.log(cookies.jwt)
   const refreshToken = cookies.jwt
 
   //Check  for user with refreshToken
   const loginUser = await User.findOne({ refreshToken: refreshToken }).exec()
-  console.log(loginUser)
+  // console.log(loginUser)
   if (!loginUser) return res.json({ "message": "No user with refreshToken matches" })
    
   //verify JWT

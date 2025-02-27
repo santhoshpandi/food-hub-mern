@@ -35,7 +35,7 @@ const loginUser = async (req, res) => {
   const result = await user.save()
 
 
-  console.log(result)
+  // console.log(result)
 
 
   //Storing Tokens in the Cookie
@@ -52,8 +52,8 @@ const loginUser = async (req, res) => {
     secure: false
   })
 
-  console.log('from logincontroller ' + refreshToken)
-  console.log('to loginControlle' + req.cookies.jwt)
+  // console.log('from logincontroller ' + refreshToken)
+  // console.log('to loginControlle' + req.cookies.jwt)
 
   //------------------------------------------------------
   res.json({

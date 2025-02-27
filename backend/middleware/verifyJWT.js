@@ -5,8 +5,8 @@ const verifyJWT = (req,res,next)=>{
   // if(!authHeader?.startsWith('Bearer')) return res.json({"message":"Auth Header (Bearer Token) not found"})
   // console.log(authHeader) //Bearer token
   // const token = authHeader.split(' ')[1]
-  console.log('From verifyJWT.js')
-  console.log(req.cookies)
+  // console.log('From verifyJWT.js')
+  // console.log(req.cookies)
   const token = req.cookies.accessToken
   if(!token) return res.json({"message":"Access Token not Found"})
   

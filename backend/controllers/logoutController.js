@@ -11,9 +11,8 @@ const logoutUser = async (req, res) => {
 
   //Check  for user with refreshToken
   const loginUser = await User.findOne({ refreshToken }).exec()
-  console.log('From logoutController')
-  console.log(loginUser)
-  console.log('skdfjl')
+  // console.log('From logoutController')
+  // console.log(loginUser)
 
   //Clears the cookie
   if (!loginUser) {

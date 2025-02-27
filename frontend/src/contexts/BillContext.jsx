@@ -57,12 +57,12 @@ export function BillProvider({ children }) {
         await showBillData()         
       }
       else{
-        console.log(response)
+        // console.log(response)
       }
     }
     catch(err)
     {
-      console.log('showBill '+err)
+      console.log('showBill '+err.message)
     }
   }
 

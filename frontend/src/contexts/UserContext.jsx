@@ -68,7 +68,7 @@ export function UserProvider({ children }) {
           ...userData,
           _id: response.data.userData._id
         })
-        console.log("🗝" + response.data.accessToken) 
+        // console.log("🗝" + response.data.accessToken) 
         navigate(response.data.redirectUrl)        
         enqueueSnackbar('Logined Successfully!',{variant:'success'})       
       }

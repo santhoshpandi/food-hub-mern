@@ -70,10 +70,10 @@ const showUser =async (req,res)=>{
       "message":"Login first to show user"
     })
 
-    console.log(refreshToken)
+    // console.log(refreshToken)
     const userData = await User.findOne({refreshToken:refreshToken}).exec()
 
-    console.log(userData)
+    // console.log(userData)
     if(!userData) return res.json({
       "message":"User not found"
     })
