@@ -1,0 +1,102 @@
+[
+  {
+    "review": "The mutton biryani was bursting with flavor, and the meat was incredibly tender. It was perfectly spiced and a delight for anyone who loves a rich biryani.",
+    "rating": 5,
+    "location": "Mumbai"
+  },
+  {
+    "review": "The veg biryani was decent but lacked the depth of flavor I was expecting. It was a bit bland, though the vegetables were fresh and well-cooked.",
+    "rating": 3,
+    "location": "Delhi"
+  },
+  {
+    "review": "The chicken biryani was delicious and well-seasoned. The chicken was juicy and perfectly cooked, though I felt it could use a little more spice.",
+    "rating": 4,
+    "location": "Bangalore"
+  },
+  {
+    "review": "The beef biryani was underwhelming. The beef was tough and the flavors were not as bold as I had hoped, making it a bit disappointing.",
+    "rating": 2,
+    "location": "Chennai"
+  },
+  {
+    "review": "The mutton biryani was outstanding! It had the perfect balance of spices, and the mutton was incredibly tender, making each bite a joy.",
+    "rating": 5,
+    "location": "Kolkata"
+  },
+  {
+    "review": "The veg biryani was average at best. It wasn’t too flavorful and the rice was a bit overcooked, but it was still an okay option for vegetarians.",
+    "rating": 3,
+    "location": "Hyderabad"
+  },
+  {
+    "review": "The chicken biryani didn’t meet my expectations. The chicken was dry and lacked the rich flavors of a traditional biryani, which made it disappointing.",
+    "rating": 2,
+    "location": "Pune"
+  },
+  {
+    "review": "The beef biryani was flavorful, with the meat being tender and well-seasoned. The spices were just right, making this a hearty dish.",
+    "rating": 4,
+    "location": "Jaipur"
+  },
+  {
+    "review": "The mutton biryani was a real treat. It had the perfect amount of spices and the mutton was cooked beautifully, making it a must-try dish.",
+    "rating": 4,
+    "location": "Ahmedabad"
+  },
+  {
+    "review": "The chicken biryani was fantastic, with juicy chicken and a rich, aromatic rice base. It had just the right amount of heat and was a flavorful delight.",
+    "rating": 5,
+    "location": "Lucknow"
+  },
+  {
+    "review": "The beef biryani was mediocre. The beef wasn’t as tender as I expected, and the flavors were lacking in complexity, leaving me underwhelmed.",
+    "rating": 2,
+    "location": "Mumbai"
+  },
+  {
+    "review": "The veg biryani had a mild flavor, which was a bit disappointing. It wasn’t as rich as other biryanis I’ve had, but it was still enjoyable in its own way.",
+    "rating": 3,
+    "location": "Delhi"
+  },
+  {
+    "review": "The mutton biryani was absolutely perfect! The spices were on point, and the mutton was melt-in-your-mouth tender, making every bite a delight.",
+    "rating": 5,
+    "location": "Bangalore"
+  },
+  {
+    "review": "The chicken biryani was flavorful but needed a bit more seasoning. The rice was cooked well, and the chicken was tender, but it lacked the boldness I was hoping for.",
+    "rating": 3,
+    "location": "Chennai"
+  },
+  {
+    "review": "The beef biryani was delicious, with rich, deep flavors and tender beef. The spices were balanced, creating a satisfying and filling meal.",
+    "rating": 4,
+    "location": "Kolkata"
+  },
+  {
+    "review": "The veg biryani was quite disappointing. It was bland, and the rice didn’t have enough flavor. It was missing the punch that a good biryani should have.",
+    "rating": 1,
+    "location": "Hyderabad"
+  },
+  {
+    "review": "The mutton biryani was flavorful and satisfying. The meat was tender and well-seasoned, making it a standout dish for anyone who loves a good biryani.",
+    "rating": 4,
+    "location": "Pune"
+  },
+  {
+    "review": "The chicken biryani was flavorful, but the chicken was a bit overcooked, making it less enjoyable. The spices were good, though, and the rice was perfect.",
+    "rating": 3,
+    "location": "Jaipur"
+  },
+  {
+    "review": "The beef biryani was excellent. The meat was tender and cooked with a perfect blend of spices, creating a rich and satisfying dish.",
+    "rating": 5,
+    "location": "Ahmedabad"
+  },
+  {
+    "review": "The veg biryani was good but lacked the punch of a truly flavorful biryani. The rice was fine, but the overall flavor profile could have been stronger.",
+    "rating": 3,
+    "location": "Lucknow"
+  }
+]

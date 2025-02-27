@@ -21,7 +21,7 @@ export default function UserProfile() {
 
   return (
     <>
-      <div className="h-screen flex md:flex-row flex-col p-10 items-center justify-center gap-5 ">
+      <div className="h-screen flex md:flex-row flex-col p-5 items-center md:justify-center justify-normal gap-5 ">
         <div className='md:w-[40%] w-[90%]'>
           <img src={imgUrl} alt="Loading" className='w-full h-full mix-blend-multiply' />
         </div>

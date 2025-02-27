@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&family=Special+Elite&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@theme {
+  --font-poppins: "Poppins", sans-serif; 
+}
+
+body{
+  @apply font-poppins overflow-x-hidden
+}

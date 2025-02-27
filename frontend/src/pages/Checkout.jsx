@@ -21,7 +21,7 @@ export default function Checkout() {
             Total Amount  <br />
             <span className="font-xl font-semibold">{bill.totalAmount}</span>
           </div> 
-          <button onClick={()=>deleteBillData(bill._id)}>Delete</button>
+          <button onClick={()=>deleteBillData(bill._id)} className="hover:bg-slate-900 duration-150 px-2 py-1 text-white rounded-md bg-red-600" >Delete</button>
           
         </div>
 
