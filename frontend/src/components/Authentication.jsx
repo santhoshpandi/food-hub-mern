@@ -31,8 +31,8 @@ export default function Authentication() {
           <div className="signup flex-grow flex items-center justify-center">
             <form onSubmit={(event) => registerUser(userData, event)} className="signupform ">
               <h1 className="text-[30px] text-orange-700 font-bold">Sign UP</h1>
-              <input classname='' onChange={handleChange} type="text" name="username" id="username" placeholder="Username" required />
-              <input classname='' onChange={handleChange} type="password" name="password" id="password" placeholder="Password" required />
+              <input  onChange={handleChange} type="text" name="username" id="username" placeholder="Username" required />
+              <input onChange={handleChange} type="password" name="password" id="password" placeholder="Password" required />
               <button className="bg-orange-800  text-white md:max-w-[100px] p-[5px] rounded-sm">SIGN UP</button>
             </form>
           </div>
@@ -42,8 +42,8 @@ export default function Authentication() {
           <div className="signup flex-grow flex items-center justify-center">
             <form onSubmit={(event) => loginUser(userData, event)} className="signupform">
               <h1 className="text-[30px] text-orange-700 font-bold">Sign in</h1>
-              <input classname='' onChange={handleChange} type="text" name="username" id="usernames" placeholder="Username" required />
-              <input classname='' onChange={handleChange} type="password" name="password" id="passwords" placeholder="Password" required />
+              <input  onChange={handleChange} type="text" name="username" id="usernames" placeholder="Username" required />
+              <input onChange={handleChange} type="password" name="password" id="passwords" placeholder="Password" required />
               <button className="bg-orange-800 text-white md:max-w-[100px] p-[5px] rounded-sm">SIGN IN</button>
             </form>
           </div>

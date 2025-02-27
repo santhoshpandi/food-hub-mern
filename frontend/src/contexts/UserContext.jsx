@@ -17,7 +17,8 @@ export function UserProvider({ children }) {
 
    // ------------- Refreshing Access Token -------------
    async function refreshAccessToken(){
-    const response = await axios.get('http://localhost:3000/api/refresh/',{
+    const response = await axios.get(`${import.meta.env.VITE_APP_API_URI}
+/api/refresh/`,{
       withCredentials:true
     })
 
@@ -33,7 +34,8 @@ export function UserProvider({ children }) {
     event.preventDefault()
 
     try {
-      const response = await axios.post('http://localhost:3000/api/user/register', userData, {
+      const response = await axios.post(`${import.meta.env.VITE_APP_API_URI}
+/api/user/register`, userData, {
         withCredentials: true
       })
 
@@ -56,7 +58,8 @@ export function UserProvider({ children }) {
   async function loginUser(loginData, event) {
     event.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/api/user/login', loginData, {
+      const response = await axios.post(`${import.meta.env.VITE_APP_API_URI}
+/api/user/login`, loginData, {
         withCredentials: true
       })
   
@@ -81,7 +84,8 @@ export function UserProvider({ children }) {
 
   //store the data when reloads
   async function showUser() {
-    const response = await axios.get('http://localhost:3000/api/user/register', {
+    const response = await axios.get(`${import.meta.env.VITE_APP_API_URI}
+/api/user/register`, {
       withCredentials: true
     })
     if (response.data.success) {
@@ -96,7 +100,8 @@ export function UserProvider({ children }) {
   async function updateUser(userData,event) {
 
     event.preventDefault()
-    const response = await axios.put('http://localhost:3000/api/user/register', userData, {
+    const response = await axios.put(`${import.meta.env.VITE_APP_API_URI}
+/api/user/register`, userData, {
       withCredentials: true
     })
     if (response.data.success) {
@@ -111,7 +116,8 @@ export function UserProvider({ children }) {
   }
 
   async function deleteUser(_id) {
-    const response = await axios.delete('http://localhost:3000/api/user/register', {
+    const response = await axios.delete(`${import.meta.env.VITE_APP_API_URI}
+/api/user/register`, {
       data: { _id }
     }, {
       withCredentials: true,  // This is crucial to send cookies with the request
@@ -128,7 +134,8 @@ export function UserProvider({ children }) {
   }
 
   async function logoutUser(_id){
-    const response = await axios.get('http://localhost:3000/api/user/logout',{
+    const response = await axios.get(`${import.meta.env.VITE_APP_API_URI}
+/api/user/logout`,{
       withCredentials:true
     })
     if(response.data.success){
