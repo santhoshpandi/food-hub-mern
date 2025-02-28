@@ -20,13 +20,13 @@ const logoutUser = async (req, res) => {
     //Deleting Refresh token
     res.clearCookie('jwt', {
       httpOnly: true,
-      sameSite: 'None',
+      sameSite: 'Lax',
       secure: isProduction
     })
     //Deleting Accesstoken
     res.clearCookie('accessToken', {
       httpOnly: true,
-      sameSite: 'None',
+      sameSite: 'Lax',
       secure: isProduction
     })
     return res.json({
@@ -41,14 +41,14 @@ const logoutUser = async (req, res) => {
   //Deleting RefreshToken
   res.clearCookie('jwt', {
     httpOnly: true,
-    sameSite: 'None',
+    sameSite: 'Lax',
     secure: isProduction
   })
 
   //Deleting Accesstoken
   res.clearCookie('accessToken', {
     httpOnly: true,
-    sameSite: 'None',
+    sameSite: 'Lax',
     secure: isProduction
   })
 
