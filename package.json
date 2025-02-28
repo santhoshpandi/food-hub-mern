@@ -1,0 +1,15 @@
+{
+  "name": "food-hub-mern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""
+  },
+  "keywords": [],
+  "author": "Santhosh Pandi K",
+  "license": "ISC",
+  "description": "A full-stack web application built using the MERN stack (MongoDB, Express.js, React, Node.js) with JWT-based authentication. The app allows users to sign up, log in, view reviews, order food, view their orders, manage their profile, and log out.",
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
