@@ -1,4 +1,3 @@
-console.clear()
 //-----------------------------------------------------
 //Import default
 const express = require('express')
