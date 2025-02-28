@@ -7,16 +7,19 @@ A full-stack web application built using the MERN stack (`MongoDB`, `Express.js`
 - `Santhosh Pandi` -- **Live Preview** https://food-hub-cyan.vercel.app
 
 ## Screenshots
-![image](https://github.com/user-attachments/assets/134a5624-6485-4c9f-ba68-e66e52e3e1b3)
 
-![image](https://github.com/user-attachments/assets/351d9ffc-5384-46c4-9b0d-24e33901a6ab)
+![image](https://github.com/user-attachments/assets/138b25db-a5a0-4ac8-9260-41c37ff2fa82)
+![image](https://github.com/user-attachments/assets/5b8d50f4-9b10-492e-b877-48a7617ff791)
+![image](https://github.com/user-attachments/assets/55b6dab6-247d-4c60-b1c2-449f8bf378e4)
+![image](https://github.com/user-attachments/assets/9c0e7624-c310-45f6-add3-262ec863355a)
+![image](https://github.com/user-attachments/assets/f8a19989-e3b4-4556-bfaf-1e6e7ce28a08)
+![image](https://github.com/user-attachments/assets/48afeb4c-ce32-4c6a-ba77-111bd8f38fdd)
+![image](https://github.com/user-attachments/assets/4cb3415b-319f-41c2-9a25-39ba103a3336)
 
-![image](https://github.com/user-attachments/assets/3d96c0e2-cfe6-4c69-9d3f-27aa647be7a4)
-
-![image](https://github.com/user-attachments/assets/1fd7f1b2-c9d9-4974-8694-fe92dad5e154)
-![image](https://github.com/user-attachments/assets/33bda19c-0502-4d1f-8579-b692c77cd599)
-
-
+<img src="https://github.com/user-attachments/assets/1871e68b-c217-48bb-b878-759729d732af" alt="image" height="400" width="200" > &nbsp;
+<img src="https://github.com/user-attachments/assets/e73c6841-56c3-4392-ac02-77528a495b3e" alt="image" height="400" width="200" > &nbsp;
+<img src="https://github.com/user-attachments/assets/4c9baa8e-66d8-418a-a182-28a85d29602d" alt="image" height="400" width="200" > &nbsp;
+<img src="https://github.com/user-attachments/assets/0359468d-dcf9-4a86-a4dd-8f6c39f129b8" alt="image" height="400" width="200" > &nbsp;
 
 ## Features
 
