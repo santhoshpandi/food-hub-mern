@@ -33,7 +33,7 @@ const handleRefreshToken = async (req, res) => {
           "username": decoded.username
         },
         process.env.ACCESS_TOKEN_SECRET,
-        { expiresIn: '5s' }
+        { expiresIn: '1d' }
       );
 
       //Storing New Token in the Cookie
