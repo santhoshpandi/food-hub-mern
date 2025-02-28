@@ -18,10 +18,10 @@ const port = process.env.PORT || 3000
 app.use(express.json())
 app.use(express.urlencoded({extended:false}))
 app.use(cookieParser())
-// app.use(cors({
-//   origin: process.env.FRONT_END_URL,
-//   credentials: true,
-// }))
+app.use(cors({
+  origin: process.env.FRONT_END_URL,
+  credentials: true,
+}))
 
 
 app.use((req, res, next) => {
