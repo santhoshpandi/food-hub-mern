@@ -1,5 +1,5 @@
 const User = require('../models/User')
-const isProduction = process.env.NODE_ENV === 'production';
+const isProduction = process.env.NODE_ENV !== 'development';
 
 // Handles the Logout  'api/user/logout/'
 const logoutUser = async (req, res) => {
