@@ -40,8 +40,7 @@ export function BillProvider({ children }) {
 
   async function  showBillData() {
     try{
-      const response = await axios.get(`${import.meta.env.VITE_APP_API_URI}
-/api/bill/`,{
+      const response = await axios.get(`${import.meta.env.VITE_APP_API_URI}/api/bill/`,{
         withCredentials:true
       })
       if(response.data.success){
@@ -68,8 +67,7 @@ export function BillProvider({ children }) {
 
   async function  deleteBillData(id) {
     try{
-      const response = await axios.delete(`${import.meta.env.VITE_APP_API_URI}
-/api/bill/${id}`,{
+      const response = await axios.delete(`${import.meta.env.VITE_APP_API_URI}/api/bill/${id}`,{
         withCredentials:true
       })
       if(response.data.success){        
@@ -100,8 +98,7 @@ export function BillProvider({ children }) {
     try {
       console.log("submitting....")
     
-      const response = await axios.post(`${import.meta.env.VITE_APP_API_URI}
-/api/bill/`, billData,{
+      const response = await axios.post(`${import.meta.env.VITE_APP_API_URI}/api/bill/`, billData,{
         withCredentials: true,  // This is crucial to send cookies with the request
       })
     
