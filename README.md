@@ -81,9 +81,10 @@ Make sure you have the following installed on your system:
    cd food-hub-mern
    ```
 
-3. Install the dependencies:
+3. Install the dependencies  ( From `food-hub-mern` ):
    ```
    npm install
+   npm run installs
    ```
 
   ### Environment Variables Setup
